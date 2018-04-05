@@ -46,3 +46,5 @@ In scenario's where the through put is high, its not recommonded to fluch out a 
 * Use Cassandra / Rocks DB which can facilitate high throughputs, because these are append only data compaction enabled databases which would result in good write throughput. Where as RDBM's are meant for good read performences.
 * Write to a Distributed file system like HDFS
 * If you would still like to use a RDBMS, make sure you pool records up for a certain time interval and write a micro-batch of data at a time. This makes your application stateful and hence you would have to battle with issues around failover and Idempotency.
+
+Check the [Kafka Producer](https://github.com/reddy-s/spring-kafka-json-producer) for posting json data into kafka
